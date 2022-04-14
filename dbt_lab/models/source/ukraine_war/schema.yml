@@ -1,0 +1,21 @@
+
+version: 2
+
+models:
+  - name: source_russia_losses_equipment
+    description: "Ukraine war data containing Russian equipment loss."
+    columns:
+      - name: date
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: source_russia_losses_personnel
+    description: "Ukraine war data containing Russian personnel loss."
+    columns:
+      - name: date
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,26 @@
+dbt_lab:
+  target: dev
+  outputs:
+    dev:
+      account: tb33062.us-east-2.aws
+      database: analytics
+      password: Cic@29xl
+      role: transform_role
+      schema: dbt
+      threads: 1
+      type: snowflake
+      user: edreilima
+      warehouse: transform_wh
+dbt_postgres:
+  target: dbt_postgres
+  outputs:
+    dbt_postgres:
+      type: postgres
+      host: winhost
+      user: postgres
+      password: postgres
+      port: 5432
+      dbname: postgres
+      schema: analytics
+      threads: 1
+

@@ -2,28 +2,18 @@
 version: 2
 
 models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        tests:
-          - unique
-          - not_null
-
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        tests:
-          - unique
-          - not_null
-
   - name: snowflake_customer_purchases
     description: "The total purchases for each customer in snowflake sample data"
     columns:
       - name: c_custkey
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  - name: cumulative_orders_by_date
+    description: "The cumulative purchases by date in snowflake sample data"
+    columns:
+      - name: o_orderdate
         description: "The primary key for this table"
         tests:
           - unique

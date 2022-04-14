@@ -1,0 +1,4 @@
+selectors:
+  - name: dbt_postgres
+    description: "All non-incremental dbt_postgres scripts"
+    definition: "tag:dbt_postgres"
